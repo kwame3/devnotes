@@ -1,0 +1,1 @@
+What we'll be doing is sending images that we build, right to the customer, so they can deploy on their containers

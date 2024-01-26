@@ -1,0 +1,4 @@
+CTR ALT L - Reformat code
+CTR L - copes/duplicates a line
+CTR / - comments out code
+Shift Shift - used for global search

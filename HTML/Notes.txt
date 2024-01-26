@@ -1,0 +1,2 @@
+There are no spaces around the "=" in HTML
+Radio buttons take up too much space

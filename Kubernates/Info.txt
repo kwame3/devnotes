@@ -1,0 +1,17 @@
+Kubernates is used for building containers, that can be independent of one another
+- A container is like a huge zip file that your image is on
+- the image of the container is transferable
+- an advantage of Kubernates is more containers can be used at a time
+- Kubernates is like a layer on top of all your servers
+- allows for better success of deployments
+- Kubernates is the same for AWS, Azure, etc.
+- Great Benefits of Kubernates are abstraction and building containers
+
+Containers are not VMs
+- VMs were the solution of the early 2010s
+- VMs require hypervisors, need to boot up, etc.
+- Containers start fast & are easy to deploy
+- Containers are lightweight and contain all your dependencies
+-
+
+ECR is a private directory that holds images
