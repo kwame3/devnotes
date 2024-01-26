@@ -1,0 +1,3 @@
+ng generate component features/"nameOfTheComponent"
+- make sure to generate this component in the "frontend" folder because that is where the package.json file is which holds the necessary, ng serve command
+- so, if you see "Error: This command is not available when running the Angular CLI outside a workspace.", you're not in generating in the right spot

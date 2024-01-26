@@ -1,2 +1,5 @@
 There are no spaces around the "=" in HTML
 Radio buttons take up too much space
+text-align:"" in HTML used to show where the element can be located in three positions vertically (left, center, right)
+float:"" in HTML used to show where the element can be located in three positions hortizontally (with center having no float, but "position:absolute; left: 0; right:0; margin:auto;")
+Use *ngIf for removing or showing an entire page
