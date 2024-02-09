@@ -1,5 +1,48 @@
 There are no spaces around the "=" in HTML
 Radio buttons take up too much space
 text-align:"" in HTML used to show where the element can be located in three positions vertically (left, center, right)
-float:"" in HTML used to show where the element can be located in three positions hortizontally (with center having no float, but "position:absolute; left: 0; right:0; margin:auto;")
+float:"" in HTML used to show where the element can be located in three positions horlsizontally (with center having no float, but "position:absolute; left: 0; right:0; margin:auto;")
 Use *ngIf for removing or showing an entire page
+
+div class = FOR TAILWIND -- which is a collection of CSS classes
+
+SPAN IS FOR APPLYING CSS CLASSES
+-  <span class="text-2xl">
+
+
+<div class="p-2.5"> = Tailwind padding for 10px
+ <div class="p-[15px]"> = Tailwind for 15 px (which cannot be written through the p-# format because there is no built in p-# for this number of 15)
+ <div style="padding:10px"> = HTML padding for 10px
+
+
+1. How to use <pre> ... </pre> to display values
+		-- I use it a lot with the myForm
+
+	2. validators
+		Validators.required   (angular provides this)
+
+	3. custom validators -- are own methods
+		-- They are tricky
+		-- Easy to screw them up
+		-- lots of if statements with the custom validators
+
+
+	4. The <mat-error>
+		-- Creates a hard-coded error message whenver an error is on a control *AND* the control was touched
+
+
+	5. How do we display all errors?
+			this.myForm.markAllAsTouched()
+
+
+
+	6. Got a refresher on breakpoints and step overs
+
+
+	7. Console.log('hi mom')
+		-- Used to display a message in the browser console
+		-- Should be used sparingly
+		-- Breakpoints are better
+
+		-- I use console.log calls in my custom validators  (because breakpoints don't work well in custom validators)
+		-- Everywhere else, I use breakpoints

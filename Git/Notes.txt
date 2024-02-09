@@ -1,2 +1,7 @@
 Make sure when wanting to checkout a new branch that you're in the right branch
 - Ex: checkout development, then checkout -b "name", to make a new branch from that development branch
+
+Deleting & Creating a new, updated development branch
+1. Delete Development
+2. git fetch -a = Gets a new development branch
+3. git checkout development = Checks out the new development branch

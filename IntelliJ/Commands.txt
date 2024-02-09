@@ -3,3 +3,4 @@ CTR L - copes/duplicates a line
 CTR / - comments out code
 *** Shift Shift - used for global search
 Crosshairs - goes to where your current file is
+F12 - for looking at console

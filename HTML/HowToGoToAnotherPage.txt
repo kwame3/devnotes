@@ -1,0 +1,13 @@
+1. Inject the router service
+constructor(private formBuilder:FormBuilder,
+              private myValidatorService:MyValidatorService,
+              private router:Router){}
+
+2. Create a method that would jump to the next page
+public goToHomePage():void{
+  this.router.navigate(["/"])
+}
+
+3. Add a click handler in your HTML
+(click)="this.goToHomePage()"
+Example: <a [routerLink]=[]  (click)="this.goToHomePage()" class="underline flex self-center">Save for Later</a>

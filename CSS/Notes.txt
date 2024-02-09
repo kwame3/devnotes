@@ -1,0 +1,1 @@
+border: 1px dashed black; (dashed makes the line dashed)
