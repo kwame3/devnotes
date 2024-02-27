@@ -1,0 +1,60 @@
+What did you learn?
+ -------------------------
+ 1. Clicking to take you to another page
+
+ 2. Good refresher on custom validators
+    + Very powerful
+    - Very easy to screw up
+
+ 3. Generate a service
+
+ 4. Three mat-errors
+    Created a myValidatorService
+    We only needed th 1 <mat-error> tag
+	-- 1 smart custom validator can easily replace 3 validators
+
+ 5. Code Completion
+    + Sometimes Intellij helps
+    - Sometimes, it makes things worse
+
+ 6. Regular Expressions
+    Language for creating patterns
+
+			[a-z]   matches one letter
+            [a-z]+  matches 1 to zillion letters
+            [a-z]*  matches 0 to zillion letters
+
+              ^     means the beginning of the string
+              $     means the end of the string
+
+	+ Crazy powerful
+    - Very easy to screw up
+
+					/^[a-z][0-9][0-9][0-9][0-9][0-9][0-9]$/            pattern to match what the VALID strings are
+
+
+
+
+ 7. We can apply an array of validators
+
+			this.formBuilder.group({
+
+				contractNumber:  [null,  [Validator.required, Validator.minLength(7), Validator.maxLength(7) ] ],
+
+			});
+
+		Don't forget to use SQUARE BRACKETS when you have MULTIPLE validators
+
+
+
+ 8. Adam added the "nowrap" class to style.scss
+
+		.nowrap {
+		  white-space: nowrap;
+		}
+
+
+			<mat-error class="nowrap">
+				This error will not wrap
+			</mat-error>
+

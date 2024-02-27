@@ -1,0 +1,70 @@
+5. Add a reactive form
+
+    a. Inject the formBuilder service
+    private formBuilder: FormBuilder
+
+    b. Create a class variable  called myForm
+
+   public myForm:FormGroup;
+
+    c. Use the formBuilder to initialize myForm
+
+   public ngOnInit() :void {
+       // Initializes the myForm object
+       this.myForm = this.formBuilder.group({
+         short_title: [null, null],
+         description: [null, null]
+       });
+     }
+
+    }
+    d. Add <form> tag to your HTML
+        -- This is what binds the myForm class variable to your HTML
+        <form [formGroup]="this.myForm" novalidate autocomplete="off">
+
+    e. Bind controls to your reactive form
+
+            <mat-select   formControlName="orderType">
+
+
+    f. Show reactive form values in a <pre>...</pre>
+
+        <pre>
+            this.myForm.controls.orderType.value = {{ this.myForm.controls.orderType.value  }}
+            this.myForm.controls.limitPrice.value = {{ this.myForm.controls.limitPrice.value  }}
+            this.myForm.controls.quantity.value = {{ this.myForm.controls.quantity.value  }}
+            this.myForm.controls.classification.errors = {{ this.myForm.controls.classification.errors | json }}
+        </pre>
+
+
+HOW TO CHANGE AN ARRAY OR ANYTHING BACK INTO AN OBSERVABLE
+Use "of"
+Example:of(arrayOfDTOs)
+
+HOW TO IMPLEMENT NGONINT USING A SHORTCUT
+implements OnInit on the class
+
+HOW TO IMPLEMENT A DROPDOWN OF OPTIONS USING THE OBSERVABLE
+<ng-container *ngIf="(this.obsClassifications | async) as classifications">
+      <mat-form-field class="w-[250px]">
+        <mat-label>Select a Classification</mat-label>
+        <mat-select>
+          <ng-container *ngFor="let lookUp of classifications">
+          <mat-option [value]="lookUp.id">{{ lookUp.value }}</mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+      </ng-container>
+
+
+HOW TO DISPLAY ALL ERRORS IN TYPESCRIPT
+
+// Touches all the fields so all the error messages are displayed
+    this.myForm.markAllAsTouched();
+
+Resets all the fields so all the error messages go away
+        this.myForm.reset();
+
+NEEDED FOR WHEN USING VALIDATORS
+
+    type="button"

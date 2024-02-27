@@ -1,0 +1,14 @@
+Delete A Rest Call
+
+(Every Rest Call Has...)
+1) URL -- ex: /api/delete/""
+2) URL type: GET (read only), POST (submit), PUT, DELETE
+3) Data going in
+4) Data returned
+-- nothing
+5) Security
+-- What roles are allowed?
+-- What checks are passed?
+
+Check #1: Does doucments exist in the table?
+Check #2:

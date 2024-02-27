@@ -28,7 +28,7 @@ SPAN IS FOR APPLYING CSS CLASSES
 
 
 	4. The <mat-error>
-		-- Creates a hard-coded error message whenver an error is on a control *AND* the control was touched
+		-- Creates a hard-coded error message whenever an error is on a control *AND* the control was touched
 
 
 	5. How do we display all errors?
@@ -46,3 +46,22 @@ SPAN IS FOR APPLYING CSS CLASSES
 
 		-- I use console.log calls in my custom validators  (because breakpoints don't work well in custom validators)
 		-- Everywhere else, I use breakpoints
+
+FULL WIDTH OF THE PARENT DIV OF A TEXTAREA ON PAGE
+<mat-form-field class="w-full">
+  <mat-label>Description</mat-label>
+   <textarea matInput>
+   </textarea>
+</mat-form-field>
+
+Create a DTO Class:okupDataDTO
+
+Place this in the lookup data dto ts file:
+
+export class LookupDataDTO {
+  public id: number;
+  public value: string;
+}
+
+HOW TO GENERATE A SERVICE
+ng g s services/Lookup --skip-tests

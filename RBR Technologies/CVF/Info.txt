@@ -1,1 +1,10 @@
 What we'll be doing is sending images that we build, right to the customer, so they can deploy on their containers
+
+
+Creating a class:
+
+ng g class models/GetReportDetailsDTO --skip-tests
+
+Creating a service:
+
+ng g s services/Report --skip-tests

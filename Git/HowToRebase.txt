@@ -1,0 +1,47 @@
+How to Rebase With Intellij
+---------------------------
+
+
+References
+----------
+http://blog.jessitron.com/2012/10/git-rebase-inside-intellij-idea.html
+
+
+Procedure
+---------
+ 1. Get the latest development branch   (the branch with other people's changes -- could be "master" or "development")
+    unix> git branch -D development       # Delete the development branch
+    unix> git fetch -a                    # Get the latest development branch
+    unix> git checkout development
+
+ 2. Checkout to your local branch
+
+ 3. In Intellij, Pull VCS -> Git -> Rebase
+
+ 4. In the popup
+    a. Uncheck "Interactive"
+    b. In the "onto", choose development (or the branch with other people's changes)
+    c. Click "Rebase"
+
+ 5. Resolve conflicts (if there are any)
+
+ 6. Compile it from scratch
+    unix> mvn clean package -Pprod
+
+
+    If it does not compile, fix the errors!!!!
+
+
+ 7. Do a "force push"
+    In Intellij, Pull VCS -> Git -> Push -> Force Push
+    *OR*
+    unix> git push -f    # This will perform a “force push”, which will push your rebased local branch performing the additional merge
+
+    NOTE:  If you do a git status, Git will tell you to do a "pull"
+    -- **DO NOT DO A PULL**
+    -- THis will cause a second copy of your commits to appear in the history
+
+
+    THis is the exception to the “always pull, then push” rule.
+    When you rebase, you’re creating a copy of your commit history.
+    Git treats this new copy of history as a completely different set of commits (because it is).

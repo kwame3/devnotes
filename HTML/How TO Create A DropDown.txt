@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-label>Select a priority</mat-label>
+        <mat-select>
+          <mat-option [value]=1>Low</mat-option>
+          <mat-option [value]=2>Medium</mat-option>
+          <mat-option [value]=3>High</mat-option>
+        </mat-select>
+</mat-form-field>

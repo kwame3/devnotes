@@ -1,0 +1,22 @@
+How to Define Variables
+	--------------------------
+		To define a local number
+
+				let myNumber: number = 5;
+
+
+		To define a local array of numbers
+
+				let myArrayOfNUmbers: number[3];
+				let myArrayOfNUmbers: number[3] = [ ];      // Set it equal to an empty array
+				let myArrayOfNUmbers: number[3] = [1, 2, 3];      // Set it equal to an array that holds, 1, 2, 3
+
+		How to define an observable that holds a number
+
+				let obsHoldsNumber: Observable< number >;
+
+
+		How to define an observable that holds an array of numbers
+
+				let obsHoldsArray:  Observable< number[] >;
+
