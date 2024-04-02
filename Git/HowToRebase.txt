@@ -23,7 +23,7 @@ Procedure
     b. In the "onto", choose development (or the branch with other people's changes)
     c. Click "Rebase"
 
- 5. Resolve conflicts (if there are any)
+ 5. Resolve conflicts (if there are any) AND NUKE THE DATEBASE
 
  6. Compile it from scratch
     unix> mvn clean package -Pprod

@@ -1,0 +1,17 @@
+How To Generate a New Page with Security
+
+1. Generate a new component
+
+2. Add the route to constants.ts
+
+3. Register the route in app.module.ts
+
+4. DB: Add a record to vicontrols
+
+(a) in v1.1__security.sql, insert a record into the ui tables
+EX: insert into uicontrols(id, name) values(3405, 'page/responsiveLayouts');
+(b) nuke the database
+
+5. Add to the navbar (navbar_contents.ts)
+
+6. Verify it works

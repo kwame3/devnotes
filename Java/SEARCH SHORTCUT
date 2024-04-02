@@ -1,0 +1,5 @@
+1. Go to frontend/src/app
+2. Press CTRL-SHIFT-F
+
+(The reason is because we don't want to search the nodemodules file)
+CTRL-SHIFT

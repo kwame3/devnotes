@@ -1,0 +1,11 @@
+Flyway -- stored SQL updates
+Migrate -- gets the lates verison of the database
+Nuke database is a "mvn flyway:clean" and "mvn flyway:migrate"
+
+Flyway is an open source tool that solves
+
+Backend -- SQL statement
+
+DataSource - Java interface -- it's a contract that requires certain methods to be present
+It is used to execute SQL
+It is an abstraction in that it represents a database

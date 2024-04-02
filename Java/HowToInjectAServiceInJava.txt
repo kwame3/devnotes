@@ -1,0 +1,4 @@
+Add a class variable which the type is of the service you are using
+-- private ReportService reportService
+
+Add the @Resource tag to the variable

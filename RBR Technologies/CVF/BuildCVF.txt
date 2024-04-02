@@ -1,0 +1,10 @@
+1. Build and run the sync service (ERASE the database) up to the dev1 cluster
+    terminal> scripts\mclean dev1
+     Are you sure you want to continue? [y|n]   Y
+
+2. Build and push the CVF webapp up to the dev1 cluster
+    terminal> scripts\m dev1
+
+3. Get to the Home Page (Welcome Dashboard Page)
+    a. Go to https://dev1.rbr-tech.us/cvf/   (as CVF_SUPERVISOR)
+

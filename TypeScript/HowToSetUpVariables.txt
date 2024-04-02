@@ -20,3 +20,20 @@ How to Define Variables
 
 				let obsHoldsArray:  Observable< number[] >;
 
+How to Create an array of DTOs
+
+EXAMPLE-----------------------
+
+  public arrayOfReports:FormArrayDTO[] = [{
+    reportName: "Report #1",
+    reportDescription: "This is the description for report #1"
+  },
+    {
+      reportName: "Report #2",
+      reportDescription: "This is the description for report #2"
+    },
+    {
+      reportName: "Report #3",
+      reportDescription: "This is the description for report #3"
+    }
+  ];

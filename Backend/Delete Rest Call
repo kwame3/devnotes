@@ -1,5 +1,7 @@
 Delete A Rest Call
 
+What is the contract for the REST Call?
+
 (Every Rest Call Has...)
 1) URL -- ex: /api/delete/""
 2) URL type: GET (read only), POST (submit), PUT, DELETE
@@ -8,6 +10,7 @@ Delete A Rest Call
 -- nothing
 5) Security
 -- What roles are allowed?
+6) Checks
 -- What checks are passed?
 
 Check #1: Does doucments exist in the table?

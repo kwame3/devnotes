@@ -1,8 +1,10 @@
 5. Add a reactive form
 
     a. Inject the formBuilder service
-    private formBuilder: FormBuilder
+    constructor(private formBuilder: FormBuilder)
+    {
 
+    }
     b. Create a class variable  called myForm
 
    public myForm:FormGroup;
