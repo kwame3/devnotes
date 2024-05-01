@@ -1,0 +1,27 @@
+
+	SQL / How to do a SQL Aggregates / Group By
+
+			4001
+			4002                        id        count
+			4002          --->         4001         1
+			4003                       4002         2
+			4003                       4003         3
+			4003
+
+
+
+		SQL Group By:
+
+
+						Part 1:  Look at the repeated data
+
+										select the-repeated-column
+										from table
+
+
+						Part 2:  Use the count & group by to get the counts
+
+										select the-repeated-column, COUNT(the-repeated-column)
+										from table
+										GROUP BY the-repeated-column;
+

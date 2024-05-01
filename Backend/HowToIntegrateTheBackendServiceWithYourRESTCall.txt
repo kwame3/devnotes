@@ -1,0 +1,55 @@
+How Do We Integrate the Frontend with the Backend
+
+1. Change the fake contents of the Service method of
+
+------------------------------------------------------------------------------------------------------------------------
+
+Before:
+
+public getAllSupervisorAlertsForCaseID(aCaseId: number): Observable<GetAlertDetailsSupervisorDTO[]> {
+
+   let data: GetAlertDetailsSupervisorDTO[] = [
+      {
+        alertId: 1000,
+        alertStateId: 11,
+        triggeringText: "This is my triggering text",
+        dataSourceUrl: "http://google.com",
+        alertCreatedByFullName: "System",
+        alertCreatedDate: "04/10/2024",
+        assignedToFullName: "System",
+        alertPriorityId: 2,
+        displayedGuideline: "A. Business Relationships & Profiles",
+        displayedSubGuideline: "1. Ownership",
+        displayedRiskCategory: "A. Foreign Ownership, Control, or Influence",
+        displayedBusinessRule: "1A1 / Any indications that the company or it's controlling interest (i.e. parent, general partner, manager, etc.) has foreign nationals in positions of control or access to sensitive information."
+      },
+      {
+        alertId: 1001,
+        alertStateId: 1,
+        triggeringText: "This is my triggering text 2",
+        dataSourceUrl: "http://google.com",
+        alertCreatedByFullName: "System",
+        alertCreatedDate: "04/10/2024",
+        assignedToFullName: "System",
+        alertPriorityId: 2,
+        displayedGuideline: "A. Business Relationships & Profiles",
+        displayedSubGuideline: "1. Ownership",
+        displayedRiskCategory: "A. Foreign Ownership, Control, or Influence",
+        displayedBusinessRule: "1A1 / Any indications that the company or it's controlling interest (i.e. parent, general partner, manager, etc.) has foreign nationals in positions of control or access to sensitive information."
+      },
+    ];
+
+    return of(data);
+}
+
+------------------------------------------------------------------------------------------------------------------------
+After:
+
+public getAllSupervisorAlertsForCaseID(aCaseId: number): Observable<GetAlertDetailsSupervisorDTO[]> {
+
+    // Construct the URL to get the data to load all the Alert Business Rule for a specific case ID and Alert ID
+    const restUrl: string = environment.baseUrl + '/api/alert/supervisor/get/' + aCaseId;
+
+    // Return an observable that will hold a list of Alert Business Rule Objects
+    return this.httpClient.get <GetAlertDetailsSupervisorDTO[]>(restUrl);
+  }

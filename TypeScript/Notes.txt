@@ -47,7 +47,23 @@ HOW TO IMPLEMENT NGONINT USING A SHORTCUT
 implements OnInit on the class
 
 HOW TO IMPLEMENT A DROPDOWN OF OPTIONS USING THE OBSERVABLE
-<ng-container *ngIf="(this.obsClassifications | async) as classifications">
+    a. Inject the MySpecialistService
+
+    Example: constructor(private riskIndicatorService: lookupService)
+    {
+
+    }
+    b. Create a public class variable that is an observable that holds an array of what you are passing in
+
+    Example:   public allSupervisorDispositionsObs:        Observable<LookupDataDTO[]>;
+
+    c. In ngOnInit(), initialize the observable
+
+    Example: this.allSupervisorDispositionsObs = this.lookupService.getAllSupervisorDispositions();
+
+    d. Use the HTML
+
+    <ng-container *ngIf="(this.obsClassifications | async) as classifications">
       <mat-form-field class="w-[250px]">
         <mat-label>Select a Classification</mat-label>
         <mat-select>

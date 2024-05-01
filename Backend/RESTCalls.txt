@@ -1,0 +1,4 @@
+GET - Read-Only, AND has No body, or body, Meaning nothing can be passed in, or Nothing can be passed in
+DELETE - Delete
+PUT - Write, but has no Body, Meaning nothing passed in
+POST - Write, but has a body, Meaning something passed in

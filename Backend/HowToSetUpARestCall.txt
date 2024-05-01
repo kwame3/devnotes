@@ -1,0 +1,44 @@
+How to Implement the REST Call
+
+        1. Create the backend DTO:     If you called it FormArrayDTO on the frontend, then call it FormArrayDTO on the backend
+        If you called it DetailDTO on the frontend,    then call it DetailDTO on the backend
+
+        2. Create the backend service:     ReportService
+        -- Add a logger
+        private static final Logger logger = LoggerFactory.getLogger(CaseService.class);
+        -- Add the @Service annotation above the class
+        -- (Optional) Inject the DataSource if you are doing any SQL queries
+        @Resource
+        	private DataSource dataSource;
+        -- Add a public method that does the work
+
+        3. Create the backend controller:  ReportController
+	    -- Add a logger
+		-- Add the @Controller annotation above the class
+		-- Inject the Service into the controller
+		-- Add a public method that is the starting point of the REST point, which also includes the two annotations
+		-- Pass in a DTO (optional)
+		ResponseEntity<?> getStateCaseInfo(@RequestBody GetCaseStateIncomingDTO aDTO) {
+		-- i.e. - @RequestMapping(value = "/api/banners/add", method = RequestMethod.POST, produces = "application/json")
+				  @PreAuthorize("hasAnyRole('CVF_SUPERVISOR', 'CVF_SPECIALIST', 'CVF_ADMIN', 'CVF_REVIEWER')")
+                   public ResponseEntity<?> getExceptionList(@PathVariable(name="filterNumber") Integer aFilterNumber) {
+                          logger.debug("getExceptionList() started");
+                          if (aFilterNumber < 1 || aFilterNumber > 5) {
+                                      // The number is outside the range
+                                      return ResponseEntity
+                                              .status(HttpStatus.BAD_REQUEST)
+                                              .contentType(MediaType.TEXT_PLAIN)
+                                              .body("Filter number was not valid");
+                                  }
+                          }
+        4. Test it using Postman
+        -- Is all of the passed-in data getting through?
+
+        5. Figure out the SQL
+
+        6. Change the backend service to actually run your SQL
+
+        7. Test it using Postman
+
+
+

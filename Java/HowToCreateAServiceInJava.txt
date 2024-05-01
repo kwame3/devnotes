@@ -1,0 +1,3 @@
+Map<String, Object> paramMap = new HashMap<>();
+paramMap.put("caseIds", aCaseIds);
+paramMap.put("assignedUserId", aAssignedUserId);

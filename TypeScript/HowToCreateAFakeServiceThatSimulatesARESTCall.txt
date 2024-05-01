@@ -1,0 +1,26 @@
+1. Add a public method to an Angular service
+
+
+2. This public method must return an Observable, with the method
+
+public getStuff(): Observable<string> {
+
+}
+
+3. Create a local variable that is the same type of what's inside the returned observable type
+
+let data: string = "Hi Mom";
+
+4. Convert that data to an observable and return it
+
+return of(data);
+
+
+Final Example
+
+public getStuff(): Observable<string> {
+
+    let data: string = "Hi Mom";
+    return of(data);
+
+}
